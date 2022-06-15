@@ -6,7 +6,8 @@ from sys import version_info
 VERSION = "v0.0.6"
 CURR_PATH = "{}{}".format(path.abspath(path.dirname(__file__)), '/')
 
-
+with open(".version") as f:
+    VERSION = f"v{f.read().splitlines()[0]}"
 
 
 def path_format(file_path=None, file_name=None, is_abspath=False,
