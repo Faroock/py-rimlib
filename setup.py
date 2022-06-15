@@ -3,7 +3,7 @@ from os import path
 from setuptools import setup, find_packages
 from sys import version_info
 
-VERSION = "0.0.1"
+VERSION = "v0.0.1"
 CURR_PATH = "{}{}".format(path.abspath(path.dirname(__file__)), '/')
 
 
@@ -94,9 +94,8 @@ setup(
     author='Faroock',
     author_email='faroock@gmail.com',
     url='https://github.com/Faroock/py-rimlib',
-    download_url='https://github.com/Faroock/py-rimlib'.format(
-        VERSION),
-    keywords=['ejemplo_paquete','ejemplo','paquete','package','example'],
+    download_url=f'https://github.com/Faroock/py-rimlib/archive/refs/tags/{VERSION}.tar.gz',
+    keywords=['faroock','rim','rimdev','rimlib','rimdev_lib'],
     install_requires=[
         'requests',
     ],
@@ -108,7 +107,7 @@ setup(
         'pytest-dependency',
     ],
     entry_points={
-        'console_scripts': ['ejemplo_paquete=ejemplo_paquete.ejemplo_paquete_mod:main'],
+        'console_scripts': ['rimdev_lib=rimdev_lib.rimdev_lib:main'],
     },
     classifiers=[
         'Development Status :: 4 - Beta',
