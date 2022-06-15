@@ -95,7 +95,7 @@ setup(
     author='Faroock',
     author_email='faroock@gmail.com',
     url='https://github.com/Faroock/py-rimlib',
-    download_url=f'https://github.com/Faroock/py-rimlib/archive/refs/tags/{VERSION}.tar.gz',
+    download_url=f'https://github.com/Faroock/py-rimlib/tarball/{VERSION}',
     keywords=['faroock','rim','rimdev','rimlib','rimdev_lib'],
     install_requires=[
         'requests',
@@ -110,14 +110,6 @@ setup(
     entry_points={
         'console_scripts': ['rim-lib=rimdev_lib.rimdev:main'],
     },
-    classifiers=[
-        'Development Status :: 4 - Beta',
-        'Intended Audience :: Developers',
-        'Topic :: Software Development :: Build Tools',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-    ],
+    classifiers=[ ],
+    include_package_data=True,
 )
