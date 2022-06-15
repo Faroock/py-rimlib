@@ -91,6 +91,7 @@ setup(
     packages=find_packages(),
     description='Librería personal para desarrollo de aplicaciones',
     long_description=read("README.md"),
+    long_description_content_type='text/markdown',
     author='Faroock',
     author_email='faroock@gmail.com',
     url='https://github.com/Faroock/py-rimlib',
