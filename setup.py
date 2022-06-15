@@ -108,7 +108,7 @@ setup(
         'pytest-dependency',
     ],
     entry_points={
-        'console_scripts': ['rimdev_lib=rimdev_lib.rimdev_lib:main'],
+        'console_scripts': ['rim-lib=rimdev_lib.rimdev:main'],
     },
     classifiers=[
         'Development Status :: 4 - Beta',
