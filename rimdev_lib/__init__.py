@@ -1,3 +1,3 @@
-import rimdev_lib
+from rimdev_lib.rimdev import get_my_ip
 
-__all__ = ['rimdev_lib']
+__all__ = ['get_my_ip']
