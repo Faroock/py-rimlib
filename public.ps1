@@ -1,5 +1,5 @@
 Try {
-    Remove-Item -Path .\dist
+    Remove-Item .\dist
     $version = Get-Content .\.version
     $v = $version.Split('.')
     $v[-1] = ($v[-1] -As [int]) + 1
@@ -13,7 +13,10 @@ Try {
     }
     
     Set-Content -Value $version -Path .\.version
-    
+    $linea = (Get-Content .\setup.py)[5]
+    $valor = "VERSION = 'v${version}'"
+    (Get-Content .\setup.py) | ForEach-Object {$_ -replace "$linea", "$valor"} | Set-Content .\setup.py
+
     python setup.py sdist
     
     twine upload dist/*
