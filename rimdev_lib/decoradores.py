@@ -3,6 +3,16 @@ from datetime import datetime
 import os
 import sys
 from types import FunctionType
+from unittest import result
+
+def trying(func):
+    def wrapper(*args, **kwargs):
+        try:
+            result = func(*args, **kwargs)
+            return result
+        except Exception as e:
+            raise(e)
+    return wrapper
 
 def process_batch(*args, **kwargs):
     if len(args) > 0 and type(args[0]) is FunctionType:

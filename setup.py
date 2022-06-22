@@ -3,7 +3,7 @@ from os import path
 from setuptools import setup, find_packages
 from sys import version_info
 
-VERSION = 'v0.0.9'
+VERSION = 'v0.0.14'
 CURR_PATH = "{}{}".format(path.abspath(path.dirname(__file__)), '/')
 
 
@@ -98,7 +98,12 @@ setup(
     install_requires=[
         'requests',
     ],
-    setup_requires=['requests'],
+    setup_requires=[
+        'requests',
+        'SQLAlchemy',
+        'python-dotenv',
+        'pandas'
+    ],
     tests_require=[
         'pytest',
         'pytest-cov',
